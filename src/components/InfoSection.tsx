@@ -31,9 +31,9 @@ const InfoSection = () => {
                     Localização
                   </h3>
                   <p className="font-body text-muted-foreground">
-                    Rua das Flores, 123 - Centro
+                    Rua Altos do Oiti, 92 - Jd Helena
                     <br />
-                    São Paulo, SP - CEP 01234-567
+                    São Paulo, SP - CEP 08050-100
                   </p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const InfoSection = () => {
                     WhatsApp
                   </h3>
                   <p className="font-body text-muted-foreground">
-                    (11) 99999-9999
+                    (11) 97608-0895
                   </p>
                 </div>
               </div>

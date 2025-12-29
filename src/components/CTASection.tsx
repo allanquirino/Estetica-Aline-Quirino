@@ -3,7 +3,7 @@ import { MessageCircle, Calendar, ArrowRight } from "lucide-react";
 
 const CTASection = () => {
   const whatsappLink =
-    "https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário.";
+    "https://wa.me/5511976080895?text=Olá! Gostaria de agendar um horário.";
 
   return (
     <section
