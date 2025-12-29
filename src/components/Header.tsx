@@ -20,7 +20,6 @@ const Header = () => {
     { href: "#servicos", label: "Serviços" },
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#contato", label: "Contato" },
-    { href: "https://www.instagram.com/esteticaaline.quirino", label: "Instagram", external: true },
   ];
 
   const scrollToSection = (href: string) => {

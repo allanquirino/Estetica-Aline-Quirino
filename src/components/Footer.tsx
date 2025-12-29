@@ -5,9 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: MessageCircle, href: "#", label: "WhatsApp" },
+    { icon: Instagram, href: "https://www.instagram.com/esteticaaline.quirino", label: "Instagram" },
   ];
 
   return (
@@ -38,7 +36,7 @@ const Footer = () => {
                 aria-label={social.label}
               >
                 <social.icon
-                  className="h-5 w-5 text-primary-foreground/80"
+                  className="h-8 w-8 text-primary-foreground/80"
                   strokeWidth={1.5}
                 />
               </a>
@@ -49,8 +47,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 mt-8 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
             <p className="font-body text-sm text-primary-foreground/50">
-              © {currentYear} Estética Aline Quirino. Todos os direitos
-              reservados.
+              <a href="https://wexio.dev.br" target="_blank" rel="noopener noreferrer"> © {currentYear} Desenvolvido por Wexio</a>
             </p>
             <p className="font-body text-sm text-primary-foreground/50 flex items-center gap-1">
               Feito com <Heart className="h-3 w-3 fill-primary text-primary" />{" "}
