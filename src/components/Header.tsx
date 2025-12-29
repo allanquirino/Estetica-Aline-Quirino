@@ -20,6 +20,7 @@ const Header = () => {
     { href: "#servicos", label: "Serviços" },
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#contato", label: "Contato" },
+    { href: "https://www.instagram.com/esteticaaline.quirino", label: "Instagram", external: true },
   ];
 
   const scrollToSection = (href: string) => {
@@ -43,15 +44,27 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => scrollToSection(link.href)}
-              className="font-body text-sm text-foreground/80 hover:text-primary transition-colors duration-200"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className="font-body text-sm text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                {link.label}
+              </button>
+            )
+          )}
         </nav>
 
         <div className="hidden md:block">
@@ -82,15 +95,27 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md shadow-soft border-t border-border animate-fade-in">
           <nav className="container py-6 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="font-body text-base text-foreground/80 hover:text-primary transition-colors duration-200 text-left py-2"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-base text-foreground/80 hover:text-primary transition-colors duration-200 text-left py-2"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href)}
+                  className="font-body text-base text-foreground/80 hover:text-primary transition-colors duration-200 text-left py-2"
+                >
+                  {link.label}
+                </button>
+              )
+            )}
             <Button
               variant="cta"
               className="mt-4"
